@@ -77,5 +77,12 @@ class mcollective::plugins(
     application => true,
   }
 
+  mcollective::plugins::plugin { 'shellcmd':
+    ensure      => present,
+    type        => 'agent',
+    ddl         => false,
+    application => true,
+  }
+
 }
 
